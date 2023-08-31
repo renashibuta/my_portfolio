@@ -1,0 +1,47 @@
+{
+  "name": "shibuta-intern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.6",
+    "three": "^0.149.0",
+    "three-orbitcontrols": "^2.110.3"
+  },
+  "devDependencies": {
+    "@types/animejs": "^3.1.7",
+    "@types/three": "^0.148.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.27.11",
+    "browserify": "^17.0.0",
+    "del": "^6.1.1",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "log-symbols": "^4.1.0",
+    "sass": "^1.50.0",
+    "tsify": "^5.0.4",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}
