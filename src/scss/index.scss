@@ -251,18 +251,18 @@ footer .container div a:hover {
   #menu-status:checked ~ #menu-btn span:nth-child(1) {
     top: 50%;
     left: 50%;
-    color: #000;
+    background-color: #000;
     transform: translate(-50%, -50%) rotate(-45deg);
   }
   #menu-status:checked ~ #menu-btn span:nth-child(2) {
     top: 50%;
     left: 50%;
-    color:#000;
     transform: translate(-50%, -50%) scale(0);
   }
   #menu-status:checked ~ #menu-btn span:nth-child(3) {
     top: 50%;
     left: 50%;
+    background-color: #000;
     transform: translate(-50%, -50%) rotate(45deg);
   }
   #menu-panel {
