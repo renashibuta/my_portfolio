@@ -139,3 +139,4 @@ function watchChanges() {
   console.log("\n\t" + logSymbols.info, "Watching for Changes..\n");
 }
 exports.default = series(prodClean, docs, files, images, scripts, styles, runPug, livePreview, watchChanges)
+exports.prod = series(prodClean, docs, files, images, styles, scripts, runPug)
