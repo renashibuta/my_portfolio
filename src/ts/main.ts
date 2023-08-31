@@ -39,8 +39,8 @@ if (newsList) {
     newsRow.appendChild(title);
     newsList?.appendChild(newsRow);
   }
-  const API_KEY = "DisJBaqWHwK80I55fDec7EgYSOmSAHmdZNvR";
-  fetch("https://rena-intern.microcms.io/api/v1/news", {
+  const API_KEY = "gwKXDH4GqVe3cLltYOowTKtpxDjAyj2rdClm";
+  fetch("https://myportfoliorena.microcms.io/api/v1/news", {
     headers: {
       "X-MICROCMS-API-KEY": API_KEY,
     },
