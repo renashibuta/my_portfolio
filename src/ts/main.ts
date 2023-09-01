@@ -40,7 +40,7 @@ if (newsList) {
     newsList?.appendChild(newsRow);
   }
   const API_KEY = "gwKXDH4GqVe3cLltYOowTKtpxDjAyj2rdClm";
-  fetch("https://myportfoliorena.microcms.io/api/v1/news", {
+  fetch("https://myportfoliorena.microcms.io/api/v1/news?limit=3", {
     headers: {
       "X-MICROCMS-API-KEY": API_KEY,
     },
@@ -88,3 +88,34 @@ for (let i = 0; i < idLinks.length; i++) {
     });
   }
 }
+
+const STAR_COUNT = 5;
+const hobby = document.getElementById("hobby")!;
+const news = document.getElementById("news")!;
+createStar(hobby);
+createStar(news);
+function createStar(root: Element) {
+  if (!root) return;
+  const max = Math.random() * STAR_COUNT + 5;
+  for (let i = 0; i < max; i++) {
+    const star = document.createElement("span");
+    star.className = "star";
+    star.innerText = "★";
+    const fontSize = Math.floor(Math.random() * 20) + 20;
+    star.style.fontSize = fontSize + "px";
+    const left = Math.floor(Math.random() * window.innerWidth);
+    star.style.left = left + "px";
+    star.style.top = -Math.floor(Math.random() * 100) + "px";
+    root.appendChild(star);
+    setTimeout(() => {
+      star.style.left = left - 200 + "px";
+    }, 100);
+    setTimeout(() => {
+      star.remove();
+    }, 10 * 1000);
+  }
+}
+setInterval(() => {
+  createStar(hobby);
+  createStar(news);
+}, 2000);
