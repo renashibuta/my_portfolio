@@ -64,3 +64,27 @@ if (copyright) {
   const year = new Date().getFullYear();
   copyright.innerText = `© ${year} `;
 }
+
+const idLinks = document.getElementsByTagName("a");
+for (let i = 0; i < idLinks.length; i++) {
+  const link = idLinks[i];
+  if (link.href.includes("#")) {
+    link.onclick = (evt) => {
+      evt.preventDefault();
+    };
+    link.addEventListener("click", () => {
+      const targetElement = document.getElementById(
+        link.href.split("#").pop() || ""
+      );
+      if (targetElement) {
+        const rect = targetElement.getBoundingClientRect().top;
+        const headerHeight =
+          document.querySelector("header")?.clientHeight || 0;
+        window.scroll({
+          top: rect + window.pageYOffset - headerHeight,
+          behavior: "smooth",
+        });
+      }
+    });
+  }
+}

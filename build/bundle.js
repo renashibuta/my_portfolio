@@ -26,8 +26,8 @@ if (newsList) {
         newsRow.appendChild(title);
         newsList === null || newsList === void 0 ? void 0 : newsList.appendChild(newsRow);
     }
-    const API_KEY = "DisJBaqWHwK80I55fDec7EgYSOmSAHmdZNvR";
-    fetch("https://rena-intern.microcms.io/api/v1/news", {
+    const API_KEY = "gwKXDH4GqVe3cLltYOowTKtpxDjAyj2rdClm";
+    fetch("https://myportfoliorena.microcms.io/api/v1/news", {
         headers: {
             "X-MICROCMS-API-KEY": API_KEY,
         },
@@ -46,6 +46,27 @@ if (newsList) {
 if (copyright) {
     const year = new Date().getFullYear();
     copyright.innerText = `© ${year} `;
+}
+const idLinks = document.getElementsByTagName("a");
+for (let i = 0; i < idLinks.length; i++) {
+    const link = idLinks[i];
+    if (link.href.includes("#")) {
+        link.onclick = (evt) => {
+            evt.preventDefault();
+        };
+        link.addEventListener("click", () => {
+            var _a;
+            const targetElement = document.getElementById(link.href.split("#").pop() || "");
+            if (targetElement) {
+                const rect = targetElement.getBoundingClientRect().top;
+                const headerHeight = ((_a = document.querySelector("header")) === null || _a === void 0 ? void 0 : _a.clientHeight) || 0;
+                window.scroll({
+                    top: rect + window.pageYOffset - headerHeight,
+                    behavior: "smooth",
+                });
+            }
+        });
+    }
 }
 
 },{}]},{},[1])

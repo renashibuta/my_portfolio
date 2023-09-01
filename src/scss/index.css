@@ -7,7 +7,6 @@
 
 html {
   font-size: 10px;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -17,7 +16,13 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 18.5rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header .container {
@@ -51,10 +56,11 @@ header .container #nav a {
 }
 
 header .container #nav a:hover {
-  background-color: rgb(157, 170, 255);
+  background-color: #e2e8f9;
 }
 
 #banner {
+  margin-top: 18.5rem;
   background-image: url(/img/banner-top.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -230,7 +236,7 @@ footer .container div a {
 }
 
 footer .container div a:hover {
-  color: rgb(157, 170, 255);
+  color: #e2e8f9;
 }
 
 .sp {
@@ -248,10 +254,12 @@ footer .container div a:hover {
   header {
     height: 8rem;
     padding: 0 2rem;
-    position: relative;
   }
   header .container #nav {
     display: none;
+  }
+  #banner {
+    margin-top: 8rem;
   }
   #menu-btn {
     width: 4rem;
@@ -281,6 +289,8 @@ footer .container div a:hover {
   #menu-status:checked ~ #menu-btn span:nth-child(1) {
     top: 50%;
     left: 50%;
+    background-color: #000;
+    height: 2px;
     transform: translate(-50%, -50%) rotate(-45deg);
   }
   #menu-status:checked ~ #menu-btn span:nth-child(2) {
@@ -291,6 +301,8 @@ footer .container div a:hover {
   #menu-status:checked ~ #menu-btn span:nth-child(3) {
     top: 50%;
     left: 50%;
+    background-color: #000;
+    height: 2px;
     transform: translate(-50%, -50%) rotate(45deg);
   }
   #menu-panel {
@@ -307,6 +319,7 @@ footer .container div a:hover {
     background: #fff;
     transform: translateX(102%);
     transition: all 200ms linear;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
   }
   #menu-panel a {
     font-size: 2rem;
