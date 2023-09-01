@@ -113,7 +113,8 @@ h2.heading-01 img {
 
 #profile .container #info .row {
   display: flex;
-  height: 3.6rem;
+  align-items: center;
+  min-height: 3.6rem;
 }
 
 #profile .container #info .row:nth-child(2) {
