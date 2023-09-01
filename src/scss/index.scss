@@ -14,6 +14,12 @@ body {
   overflow-x: hidden;
 }
 
+body > div {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
 header {
   height: 18.5rem;
 }
