@@ -96,12 +96,12 @@ createStar(hobby);
 createStar(news);
 function createStar(root: Element) {
   if (!root) return;
-  const max = Math.random() * STAR_COUNT + 5;
+  const max = Math.random() * STAR_COUNT + 3;
   for (let i = 0; i < max; i++) {
     const star = document.createElement("span");
     star.className = "star";
     star.innerText = "★";
-    const fontSize = Math.floor(Math.random() * 20) + 20;
+    const fontSize = Math.floor(Math.random() * 20) + 10;
     star.style.fontSize = fontSize + "px";
     const left = Math.floor(Math.random() * window.innerWidth);
     star.style.left = left + "px";
